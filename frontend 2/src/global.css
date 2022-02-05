@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px sans-serif;
+    background-color: #6C87CB;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button, textarea {
+    font: 400 18px sans-serif;
+}
+
+.button {
+    cursor: pointer;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    height: 60px;
+    color: #FFFFFF;
+    border: #A5A5A5 solid 1px; 
+    border-radius: 10px;
+    padding-left: 30px;
+}
