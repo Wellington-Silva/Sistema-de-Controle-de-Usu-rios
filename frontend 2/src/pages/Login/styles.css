@@ -29,6 +29,7 @@
 .container .login-container section input {
     margin-bottom: 10px;
     padding: 10px;
+    color: #000;
 }
 
 .container-button {
