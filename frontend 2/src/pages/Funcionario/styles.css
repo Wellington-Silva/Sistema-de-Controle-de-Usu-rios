@@ -1,0 +1,26 @@
+.container-fun {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.container-right {
+    background-color: #fff;
+    height: 70%;
+    
+}
+
+.container-right h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+.container-left {
+    background-color: #6C87CB;
+    height: 100%;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(139, 139, 139);
+}

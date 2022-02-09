@@ -1,0 +1,40 @@
+h1 {
+    color: red;
+}
+
+.container-cad {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastrar-container {
+    width: 80%;
+    max-width: 1120px;
+    height: 67vh;
+    padding: 50px;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    background-color: #E9E9E9;
+}
+
+.container .cadastrar-container section input {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #000;
+}
+
+.cadastrar-container section button {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background-color: #6c87cb;
+    border-radius: 10px;
+    border: 2px solid rgb(105, 105, 105);
+    margin-bottom: 10px;
+}

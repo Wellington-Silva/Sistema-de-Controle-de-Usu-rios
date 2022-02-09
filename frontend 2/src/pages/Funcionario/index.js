@@ -2,17 +2,18 @@ import React from "react";
 import './styles.css';
 
 export function Funcionario ({ name }) {
+    //const name = props.name;
+
     return(
-        <div className="container">
-            <h1> Tela funcionario </h1>
-            {/* <div className="container-left">
-                <label>{name}</label>
-                <button>Sair</button>
-                <div className="container-funcionario">Funcionário</div>
-            </div> 
+        <div className="container-fun">      
             <div className="container-right">
-                <div><label placeholder="Digite o nome"></label></div>
-            </div> */}
+                <title><h1>Tela funcionario</h1></title>
+            </div>
+
+            <div className="container-left">
+                <label>{name}</label>
+                <footer><button id="sair">Sair</button></footer>
+            </div>
         </div>
     );
 }
