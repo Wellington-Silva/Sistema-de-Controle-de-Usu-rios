@@ -9,9 +9,6 @@ body {
     font: 400 14px sans-serif;
     background-color: #6C87CB;
     -webkit-font-smoothing: antialiased;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 input, button, textarea {
