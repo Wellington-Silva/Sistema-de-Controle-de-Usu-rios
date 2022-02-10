@@ -32,14 +32,14 @@ export function Cadastrar() {
               onChange={(e) => setPhone(e.target.value)}
             />
             <input
-              type="date"
-              placeholder="dtContratacao"
+              type="text"
+              placeholder="Data de Contratacao"
               value={dtContratacao}
               onChange={(e) => setdtContratacao(e.target.value)}
             />
             <input
-              type="date"
-              placeholder="dtDesligamento"
+              type="text"
+              placeholder="Data de Desligamento"
               value={dtDesligamento}
               onChange={(e) => setdtDesligamento(e.target.value)}
             />

@@ -1,26 +1,152 @@
 .container-fun {
     display: flex;
     background-color: #fff;
-    justify-content: space-between;
-}
-
-.container-right {
-    background-color: #fff;
-    height: 70%;
-    
-}
-
-.container-right h1 {
-	text-align: center;
-	margin: 20px 0 0 0;
-	font-size: 1.25em;
-	font-weight: normal;
+    box-sizing: 100%;
 }
 
 .container-left {
     background-color: #6C87CB;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 200px;
+    border: 2px solid rgb(139, 139, 139);
+    box-shadow: 3px 0 3px rgb(189, 187, 187);
+}
+
+.container-left h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.container-left footer  {
+    margin-bottom: 20px;
+}
+
+.container-left footer a {
+    background-color: #6C87CB;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.usuario-div {
+    border: 1px solid rgb(56, 55, 55);
+    padding: 50px 62px;
+    background-color: #445C99;
+    color: #fff;
+}
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-right .barra-pesq #barra-pesquisar {
+    padding: 18px;
+    border-radius: 25px;
+    border: 1px solid #807f7f;
+    height: 10px;
+    width: 70vh;
+    margin-top: 25px; 
+    margin-bottom: 30px; 
+}
+
+/* .container-right .barra-pesq input {
+    padding: 18px;
+    border-radius: 25px;
+    height: 10px;
+    width: 70vh;
+}*/
+
+/*.container-right button {
     border-radius: 10px;
-    border: 1px solid rgb(139, 139, 139);
+    border: 2px solid rgb(172, 172, 172);
+    padding: 10px;
+    background-color: #485F99;
+    cursor: pointer;
+}*/
+
+.container-right h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.75em;
+	font-weight: bold;
+    color: #445C99;
+}
+
+.container-right #func-deslig {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-bottom: 50px;
+}
+
+.container-right #func-deslig input {
+    border-radius: 15px;
+    border: 1px solid #747474;
+    width: 100px;
+    color: #fff;
+}
+
+.container-right #func-deslig #list-func-off {
+    border-radius: 30px;
+    border: 2px solid rgb(172, 172, 172);
+    padding: 8px;
+    background-color: #485F99;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.container-right #func-deslig button {
+    border-radius: 30px;
+    border: 2px solid rgb(172, 172, 172);
+    padding: 8px;
+    background-color: #485F99;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.container-right .dependentes {
+    border-radius: 15px;
+    border: 2px solid #807f7f;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 10px;
+    width: 150vh;
+    height: 17vh;
+}
+
+.container-right .dependentes .elements {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.container-right .dependentes .elements label {
+    margin-bottom: 3px;
+}
+
+.container-right .dependentes .image-func {
+    border: 1px solid #747474;
+    width: 70px;
+}
+
+.container-right .dependentes .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80vh;
+    margin-bottom: 5px;
 }
