@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import './styles.css';
 
 import sair from '../../assets/logout.png';
 //import func from '../../assets/funcionario.jpg';
+import { UserCard } from '../../component/UserCard';
 
 import { Link } from "react-router-dom";
 
 export function Funcionario() {
     const name = "Wellington Carvalho";
 
-    const mes = document.getElementById('#mes');
-    if(mes !== typeof number) { console.log('Digite um número entre 1 e 12') }
+    const [mes, setMes] = useState(""); 
 
     return(
         <div className="container-fun">      
@@ -32,23 +32,22 @@ export function Funcionario() {
 
                 <div id="func-deslig">
                     <button id="list-func-off" type="submit">Funcionários desligados</button>
-                    <input id="mes" placeholder="Mês"></input>
-                    <button className="listar">Listar</button>
+                    <input type="month" id="mes" placeholder="Mês" onChange={(e)=>{setMes(e.target.value)}}></input>
+                    <button id="listar" onClick={()=>{alert(mes)}}>Listar</button>
                 </div>
 
-                <div className="dependentes">
-                    <div className="image-func"></div>
-                    <div className="elements">
-                        <label>Nome: </label>
-                        <label>Telefone: </label>
-                        <label>Data contratação: </label>
-                        <label>Data desligamento: </label>
-                    </div>
-                    <div className="buttons">
-                        <button>Listar dependentes</button>
-                        <button>Cadastrar dependentes</button>
-                    </div>
-                </div>
+                <section className="scroll" > 
+                    <UserCard image="http://source.unsplash.com/random/180x200?egirls" />
+                    <UserCard image="http://source.unsplash.com/random/180x200?coach"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?girl"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?dog"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?cat"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?man"/>
+                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
+                </section>
+
             </div>
         </div>
     );

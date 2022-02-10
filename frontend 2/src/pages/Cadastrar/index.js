@@ -4,9 +4,8 @@ import "./styles.css";
 
 export function Cadastrar() {
   const [nameFunc, setNameFun] = useState("");
-  const [telefone, setPhone] = useState("");
-  const [dtContratacao, setdtContratacao] = useState("");
-  const [dtDesligamento, setdtDesligamento] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPass] = useState("");
 
   return (
     <div className="container-cad">
@@ -27,21 +26,15 @@ export function Cadastrar() {
             />
             <input
               type="text"
-              placeholder="telefone"
-              value={telefone}
-              onChange={(e) => setPhone(e.target.value)}
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              type="text"
-              placeholder="Data de Contratacao"
-              value={dtContratacao}
-              onChange={(e) => setdtContratacao(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Data de Desligamento"
-              value={dtDesligamento}
-              onChange={(e) => setdtDesligamento(e.target.value)}
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPass(e.target.value)}
             />
           </form>
           <div className="container-button">

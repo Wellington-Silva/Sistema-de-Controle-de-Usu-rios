@@ -1,0 +1,52 @@
+.dependentes {
+    border-radius: 10px;
+    border: 2px solid #a8a8a8;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 10px;
+    width: 150vh;
+    height: 17vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.dependentes .elements {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.dependentes .elements label {
+    margin-bottom: 3px;
+    font-size: 1.10em;
+}
+
+.dependentes .image-func {
+    border: 1px solid #747474;
+    width: 70px;
+}
+
+.dependentes .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80vh;
+}
+
+.dependentes .buttons #ListDep {
+    background-color: #5978c7;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border: 2px solid #5578cf;
+    font-size: 1.10em;
+    color: #fff;
+}
+
+.dependentes .buttons #AddDep {
+    background-color: #1dda65;
+    padding: 8px;
+    border-radius: 15px;
+    border: 2px solid #3edd7b;
+    font-size: 100%;
+    color: #fff;
+}
