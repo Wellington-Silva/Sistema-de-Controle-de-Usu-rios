@@ -1,6 +1,6 @@
 import React from 'react';
 
-import modal from '../Modal'
+import modalAdd from '../Modal';
 import './styles.css';
 
 export const UserCard = ({ image }) => {
@@ -17,7 +17,7 @@ export const UserCard = ({ image }) => {
             </div>
             <div className="buttons">
                 <button id="ListDep">Listar dependentes</button>
-                <button id="AddDep" onClick={ modal }>Cadastrar dependentes</button>
+                <button id="AddDep" onClick={ () => modalAdd }>Cadastrar dependentes</button>
             </div>
         </div>
     );
