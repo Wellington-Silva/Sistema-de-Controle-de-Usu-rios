@@ -1,5 +1,6 @@
 import React from 'react';
 
+import modal from '../Modal'
 import './styles.css';
 
 export const UserCard = ({ image }) => {
@@ -15,7 +16,7 @@ export const UserCard = ({ image }) => {
                 <label>Data desligamento: </label>
             </div>
             <div className="buttons">
-                <button id="ListDep">Listar dependentes</button>
+                <button id="ListDep" onClick={modal}>Listar dependentes</button>
                 <button id="AddDep">Cadastrar dependentes</button>
             </div>
         </div>

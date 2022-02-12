@@ -16,7 +16,11 @@ export function Funcionario() {
         <div className="container-fun">      
             <div className="container-left">
                 <h2>{name}</h2>
-                <div className="usuario-div">Funcionário</div> 
+                <div className="usuario-div">
+                    <p>Data de desligamento:</p>
+                    <input type="date" id="dtDesl"></input>  
+                    <button id="sendOff">Submeter</button>
+                </div> 
                 <footer>
                     <div className="seta"></div>
                     <Link to="/" id="sair" type="submit"
@@ -47,7 +51,6 @@ export function Funcionario() {
                     <UserCard image="http://source.unsplash.com/random/180x200?man"/>
                     <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
                 </section>
-
             </div>
         </div>
     );
