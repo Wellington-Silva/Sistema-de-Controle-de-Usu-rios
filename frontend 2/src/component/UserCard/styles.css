@@ -40,6 +40,7 @@
     border: 2px solid #5578cf;
     font-size: 1.10em;
     color: #fff;
+    cursor: pointer;
 }
 
 .dependentes .buttons #AddDep {
@@ -49,4 +50,5 @@
     border: 2px solid #3edd7b;
     font-size: 100%;
     color: #fff;
+    cursor: pointer;
 }

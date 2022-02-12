@@ -7,7 +7,7 @@ export const UserCard = ({ image }) => {
     return(
         <div className="dependentes">
             <div className="image-func">
-                <img src={image} widht="100%" height="100%"/>
+                <img src={image} widht="100%" height="100%" alt=''/>
             </div>
             <div className="elements">
                 <label>Nome: </label>
@@ -16,8 +16,8 @@ export const UserCard = ({ image }) => {
                 <label>Data desligamento: </label>
             </div>
             <div className="buttons">
-                <button id="ListDep" onClick={modal}>Listar dependentes</button>
-                <button id="AddDep">Cadastrar dependentes</button>
+                <button id="ListDep">Listar dependentes</button>
+                <button id="AddDep" onClick={ modal }>Cadastrar dependentes</button>
             </div>
         </div>
     );

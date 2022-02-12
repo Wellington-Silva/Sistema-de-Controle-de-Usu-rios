@@ -1,32 +1,26 @@
-import Modal from 'react';
+import React from 'react';
 import { useState } from 'react';
+import Modal from 'react-modal';
 
 Modal.setAppElement('#root')
 
 function App() {
-
-    const [modalIsUp, setIsUp] = useState(false);
-
-    function handleOpenModal() {
-        setIsUp(true);
-    }
-
-    function handleCloseModal() {
-        setIsUp(false);
-    }
+    const [modalIsOpen, setIsOpen] = useState(false);
+    function handleOpenModal() { setIsOpen(true); }
+    function handleCloseModal() { setIsOpen(false); }
 
     const customStyles = {
         content: {
-            top: '50%',
-            left: '50%',
+            top: '30vh',
+            left: '30%',
             right: 'auto'
         }
-    } 
+    }
 
     return (
         <div className="container">
             <button id="modal-button" onClick={handleOpenModal}>Modal</button>
-            <Modal isOpen={modalIsUp } onRequestClosed={handleCloseModal}>
+            <Modal isOpen={modalIsOpen} onRequestClose={handleCloseModal} style={customStyles}>
                 <form className='modal-container'>
                     <input type="text" id='name' placeholder='Nome'></input>
                     <input type="text" id='phone' placeholder='Telefone'></input>
@@ -36,5 +30,6 @@ function App() {
         </div>
     );
 }
+
 
 export default App;
