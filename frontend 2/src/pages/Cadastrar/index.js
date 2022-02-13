@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// import api from '../../services/api';
+import { Link, useNavigate  } from "react-router-dom";
+import api from '../../services/api';
 import "./styles.css";
 
 export function Cadastrar() {
@@ -9,36 +9,28 @@ export function Cadastrar() {
   const [password, setPass] = useState("");
   const [dtcontrato, setContrato] = useState("");
 
-  /* 
-   const history = useHistory();
+  const navigate = useNavigate();
 
-    async function handleCadastro(e) {
-        e.preventDefault();
+  async function handleCadastro(e) {
+    e.preventDefault();
 
-        const dados = {
-            nome,
-            login,
-            senha,
-            email,
-            data_nascimento,
-            status
-        };
-        try {
-            await api.post('usuario', dados);
-            alert(`Conta criada com sucesso.`);
-            history.push('/');
-        } catch(err) {
-            alert('Ocorreu um erro no cadastro.');
-        }
+    const data = { nameFunc, email, password, dtcontrato }
+
+    try {
+      await api.post('funcionarios', data);
+      alert(`Conta criada com sucesso.`);
+      navigate.push('/');
+    } catch (e) {
+      alert('Erro na criação do usuário!');
     }
-  */
+  }
 
   return (
     <div className="container-cad">
       <div className="cadastrar-container">
         <section className="formulario-cad">
           <form
-            /*onSubmit={handleCadastro} */
+            onSubmit={handleCadastro} 
           >
             <h1>Cadastre-se</h1>
             <input

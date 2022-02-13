@@ -1,0 +1,22 @@
+.container-ListDep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ListDep h1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font: Arial;
+}
+
+.container-ListDep a {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}

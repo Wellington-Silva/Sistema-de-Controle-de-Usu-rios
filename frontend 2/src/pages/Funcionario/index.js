@@ -2,15 +2,28 @@ import React, { useState } from "react";
 import './styles.css';
 
 import sair from '../../assets/logout.png';
-//import func from '../../assets/funcionario.jpg';
 import { UserCard } from '../../component/UserCard';
 
-import { Link } from "react-router-dom";
+import api from '../../services/api';
+import { Link, useNavigate } from "react-router-dom";
 
 export function Funcionario() {
     const name = "Wellington Carvalho";
+    const [mes, setMes] = useState("");
 
-    const [mes, setMes] = useState(""); 
+    const navigate = useNavigate();
+
+    async function handleListFun(e) {
+        e.preventDefault();
+
+        try {
+            await api.get('funcionarios');
+            alert('OK');
+            navigate.push('/');
+          } catch (e) {
+            alert('Erro na listagem!');
+          }
+    }
 
     return(
         <div className="container-fun">      
@@ -40,7 +53,7 @@ export function Funcionario() {
                     <button id="listar" onClick={()=>{alert(mes)}}>Listar</button>
                 </div>
 
-                <section className="scroll" > 
+                <section className="scroll" onClick={handleListFun}> 
                     <UserCard image="http://source.unsplash.com/random/180x200?egirls" />
                     <UserCard image="http://source.unsplash.com/random/180x200?coach"/>
                     <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
