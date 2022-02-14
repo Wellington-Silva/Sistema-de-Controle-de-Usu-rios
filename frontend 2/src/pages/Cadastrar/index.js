@@ -8,18 +8,20 @@ export function Cadastrar() {
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
   const [dtcontrato, setContrato] = useState("");
+  const [phone, setPhone] = useState("");
 
   const navigate = useNavigate();
 
   async function handleCadastro(e) {
     e.preventDefault();
 
-    const data = { nameFunc, email, password, dtcontrato }
+    const data = { nome:nameFunc, email:email, password: password, dtcontratacao: dtcontrato, dtdesligamento: "1980-05-01", phone: phone }
 
     try {
-      await api.post('funcionarios', data);
+      await api.post('/funcionarios', data);
       alert(`Conta criada com sucesso.`);
-      navigate.push('/');
+      sessionStorage.setItem('nome', nameFunc) 
+      navigate('/fun')
     } catch (e) {
       alert('Erro na criação do usuário!');
     }
@@ -52,23 +54,29 @@ export function Cadastrar() {
               onChange={(e) => setContrato(e.target.value)}
             />
             <input
+              type="text"
+              placeholder="Telefone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <input
               type="password"
               placeholder="Senha"
               value={password}
               onChange={(e) => setPass(e.target.value)}
             />
-          </form>
-          <div className="container-button">
+            <div className="container-button">
             <button
               className="button"
               type="submit"
-              onClick={() => alert("Teste")} 
             >
               Cadastrar
             </button>
 
             <Link to="/">Login</Link>
           </div>
+          </form>
+          
         </section>
       </div>
     </div>

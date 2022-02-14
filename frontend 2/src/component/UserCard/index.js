@@ -2,17 +2,17 @@ import React from 'react';
 
 import './styles.css';
 
-export const UserCard = ({ image }) => {
+export const UserCard = ({ image, nome, dtcontratacao, dtdesligamento, phone }) => {
     return(
         <div className="dependentes">
             <div className="image-func">
-                <img src={image} widht="100%" height="100%" alt=''/>
+                <img src={image} width="100%" height="100%" alt=''/>
             </div>
             <div className="elements">
-                <label>Nome: </label>
-                <label>Telefone: </label>
-                <label>Data contratação: </label>
-                <label>Data desligamento: </label>
+                <label>Nome: {nome} </label>
+                <label>Telefone: {phone}</label>
+                <label>Data contratação: {dtcontratacao} </label>
+                <label>Data desligamento: {dtdesligamento}</label>
             </div>
             <div className="buttons">
                 <button id="ListDep">Listar dependentes</button>

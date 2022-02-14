@@ -11,11 +11,9 @@
     width: 50%;
     max-width: 1120px;
     padding: 50px;
-
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-
     background-color: #E9E9E9;
 }
 
@@ -56,8 +54,9 @@
     padding: 5px;
     background-color: #6c87cb;
     border-radius: 10px;
-    border: 2px solid rgb(105, 105, 105);
+    border: 2px solid #5f7dc9;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .login-container section a {
@@ -67,4 +66,5 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
 }

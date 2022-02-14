@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './styles.css';
 
 import sair from '../../assets/logout.png';
@@ -8,22 +8,18 @@ import api from '../../services/api';
 import { Link, useNavigate } from "react-router-dom";
 
 export function Funcionario() {
-    const name = "Wellington Carvalho";
+    const name = sessionStorage.getItem('nome');
     const [mes, setMes] = useState("");
+    const [funList, setFunList] = useState([]);
 
-    const navigate = useNavigate();
-
-    async function handleListFun(e) {
-        e.preventDefault();
-
+    useEffect(async () => {
         try {
-            await api.get('funcionarios');
-            alert('OK');
-            navigate.push('/');
+            const response = await api.get('/funcionarios');
+            setFunList(response.data);
           } catch (e) {
-            alert('Erro na listagem!');
+            console.log(e);
           }
-    }
+    }, []);
 
     return(
         <div className="container-fun">      
@@ -37,7 +33,7 @@ export function Funcionario() {
                 <footer>
                     <div className="seta"></div>
                     <Link to="/" id="sair" type="submit"
-                    onClick={() => alert("Teste")}><img src={sair} alt=""/> Sair</Link>
+                    onClick={() => {}}><img src={sair} alt=""/> Sair</Link>
                 </footer>
             </div>
 
@@ -53,16 +49,18 @@ export function Funcionario() {
                     <button id="listar" onClick={()=>{alert(mes)}}>Listar</button>
                 </div>
 
-                <section className="scroll" onClick={handleListFun}> 
-                    <UserCard image="http://source.unsplash.com/random/180x200?egirls" />
-                    <UserCard image="http://source.unsplash.com/random/180x200?coach"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?girl"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?dog"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?cat"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?man"/>
-                    <UserCard image="http://source.unsplash.com/random/180x200?woman"/>
+                <section className="scroll"> 
+
+                    {funList === [] ? null : funList.map(i => (
+                        <UserCard 
+                            key={i.idusuario}
+                            image={`http://source.unsplash.com/random/200x200?men&${i.idusuario}`}
+                            nome={i.nome}
+                            phone={i.phone}
+                            dtcontratacao={i.dtcontratacao}
+                            dtdesligamento={i.dtdesligamento}
+                        />
+                    ))}
                 </section>
             </div>
         </div>

@@ -5,8 +5,8 @@
     flex-direction: row;
     padding: 15px;
     margin: 10px;
-    width: 150vh;
-    height: 17vh;
+    width: 140vh;
+    height: 21vh;
     background-color: rgb(255, 255, 255);
 }
 
@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    width: 500px;
 }
 
 .dependentes .elements label {
@@ -23,13 +24,16 @@
 
 .dependentes .image-func {
     border: 1px solid #747474;
-    width: 70px;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 100px;
+    max-width: 100%
 }
 
 .dependentes .buttons {
     display: flex;
     flex-direction: column;
-    margin-left: 80vh;
+    margin-left: 15vh;
 }
 
 .dependentes .buttons #ListDep {
