@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container-ListDep h1 {
     color: rgb(255, 255, 255);
     font-weight: bold;
     font: Arial;
+    margin-block: 40px;
 }
 
 .container-ListDep a {
@@ -19,4 +21,5 @@
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    margin-block: 10px;
 }

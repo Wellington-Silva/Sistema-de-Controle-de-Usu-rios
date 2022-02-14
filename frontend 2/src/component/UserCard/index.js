@@ -2,7 +2,11 @@ import React from 'react';
 
 import './styles.css';
 
-export const UserCard = ({ image, nome, dtcontratacao, dtdesligamento, phone }) => {
+import { useNavigate } from "react-router-dom";
+
+export const UserCard = ({ image, nome, idfun, dtcontratacao, dtdesligamento, phone }) => {
+    const navigate = useNavigate();
+
     return(
         <div className="dependentes">
             <div className="image-func">
@@ -15,8 +19,17 @@ export const UserCard = ({ image, nome, dtcontratacao, dtdesligamento, phone }) 
                 <label>Data desligamento: {dtdesligamento}</label>
             </div>
             <div className="buttons">
-                <button id="ListDep">Listar dependentes</button>
-                <button id="AddDep" onClick="Olá">Cadastrar dependentes</button>
+                <button 
+                    id="ListDep"
+                    onClick={() => navigate('listardependente', {state :{idfun: idfun, funNome: nome}})}
+                >
+                    Listar dependentes
+                </button>
+                <button 
+                    id="AddDep" 
+                    onClick={() => navigate('/cadastrardependente', {state :{idfun: idfun, funNome: nome}})} >
+                        Cadastrar dependentes
+                </button>
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ export const Router = () => {
                 <Route path="/fun" element={<Funcionario /> } />
                 <Route path="/cadastrar" element={<Cadastrar /> } />
                 <Route path="/cadastrardependente" element={<CadastrarDependente /> } />
-                <Route path="/listardependente" element={<ListarDependente /> } />
+                <Route path="/fun/listardependente" element={<ListarDependente /> } />
             </Routes>
         </BrowserRouter>
     );

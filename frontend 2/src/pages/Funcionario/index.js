@@ -54,6 +54,7 @@ export function Funcionario() {
                     {funList === [] ? null : funList.map(i => (
                         <UserCard 
                             key={i.idusuario}
+                            idfun={i.idusuario}
                             image={`http://source.unsplash.com/random/200x200?men&${i.idusuario}`}
                             nome={i.nome}
                             phone={i.phone}
